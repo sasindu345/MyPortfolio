@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+            "id": 2,
+            "title": "Resume Builder",
+            "subtitle": "coded, designed",
+            "description": "A full-stack Resume Builder web application that helps users create ATS-friendly resumes with live preview and PDF export.",
+            "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=640&h=400&fit=crop",
+            "technologies": [
+                "React",
+                "TypeScript",
+                "Spring Boot",
+                "PostgreSQL"
+            ],
+            "category": "finished",
+            "demoUrl": "https://github.com/sasindu345/resume-builder",
+            "sourceUrl": "https://github.com/sasindu345/resume-builder",
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": "MazeMaster",
+            "subtitle": "coded",
+            "description": "2-player Arduino-based maze game with dynamic walls, RFID scoring, and ESP32 car control. An exciting embedded systems project.",
+            "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&h=400&fit=crop",
+            "technologies": [
+                "C++",
+                "Arduino",
+                "ESP32",
+                "RFID"
+            ],
+            "category": "finished",
+            "demoUrl": "https://github.com/sasindu345/MazeMaster_codes",
+            "sourceUrl": "https://github.com/sasindu345/MazeMaster_codes",
+            "featured": false
+        }
+    ],
+    "filters": [
+        "ALL",
+        "FINISHED",
+        "ONGOING"
+    ]
+}
