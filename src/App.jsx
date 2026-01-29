@@ -22,12 +22,14 @@ function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
+        const basePath = import.meta.env.BASE_URL;
+
         const [profileRes, skillsRes, projectsRes, timelineRes, achievementsRes] = await Promise.all([
-          fetch('/data/profile.json'),
-          fetch('/data/skills.json'),
-          fetch('/data/projects.json'),
-          fetch('/data/timeline.json'),
-          fetch('/data/achievements.json'),
+          fetch(`${basePath}data/profile.json`),
+          fetch(`${basePath}data/skills.json`),
+          fetch(`${basePath}data/projects.json`),
+          fetch(`${basePath}data/timeline.json`),
+          fetch(`${basePath}data/achievements.json`),
         ]);
 
         const profileData = await profileRes.json();
