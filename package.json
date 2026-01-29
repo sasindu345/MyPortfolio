@@ -1,6 +1,7 @@
 {
   "name": "myportfolio",
   "private": true,
+  "homepage": "https://sasindu345.github.io/MyPortfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
