@@ -1,0 +1,99 @@
+{
+    "categories": [
+        {
+            "title": "USING NOW:",
+            "skills": [
+                {
+                    "name": "HTML5",
+                    "icon": "html5",
+                    "color": "#E34F26"
+                },
+                {
+                    "name": "CSS3",
+                    "icon": "css3",
+                    "color": "#1572B6"
+                },
+                {
+                    "name": "JAVASCRIPT",
+                    "icon": "javascript",
+                    "color": "#F7DF1E"
+                },
+                {
+                    "name": "REACT",
+                    "icon": "react",
+                    "color": "#61DAFB"
+                },
+                {
+                    "name": "TAILWIND",
+                    "icon": "tailwind",
+                    "color": "#06B6D4"
+                },
+                {
+                    "name": "GIT",
+                    "icon": "git",
+                    "color": "#F05032"
+                },
+                {
+                    "name": "FIGMA",
+                    "icon": "figma",
+                    "color": "#F24E1E"
+                }
+            ]
+        },
+        {
+            "title": "LEARNING:",
+            "skills": [
+                {
+                    "name": "NODEJS",
+                    "icon": "nodejs",
+                    "color": "#339933"
+                },
+                {
+                    "name": "SPRING BOOT",
+                    "icon": "spring",
+                    "color": "#6DB33F"
+                },
+                {
+                    "name": "MySQL",
+                    "icon": "mysql",
+                    "color": "#4479A1"
+                },
+                {
+                    "name": "MONGODB",
+                    "icon": "mongodb",
+                    "color": "#47A248"
+                },
+                {
+                    "name": "TYPESCRIPT",
+                    "icon": "typescript",
+                    "color": "#3178C6"
+                }
+            ]
+        },
+        {
+            "title": "OTHER SKILLS:",
+            "skills": [
+                {
+                    "name": "ENGLISH",
+                    "icon": "language",
+                    "color": "#4B5563"
+                },
+                {
+                    "name": "C++",
+                    "icon": "cplusplus",
+                    "color": "#00599C"
+                },
+                {
+                    "name": "C",
+                    "icon": "c",
+                    "color": "#A8B9CC"
+                },
+                {
+                    "name": "ARDUINO",
+                    "icon": "arduino",
+                    "color": "#00979D"
+                }
+            ]
+        }
+    ]
+}

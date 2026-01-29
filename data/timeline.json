@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "type": "education",
+            "year": "2024 - Present",
+            "title": "Bachelor of Science in Information Technology",
+            "organization": "University of Moratuwa",
+            "description": "Pursuing a degree in Information Technology with focus on web technologies and software engineering."
+        },
+        {
+            "type": "education",
+            "year": "2020 - 2022",
+            "title": "Advanced Level (Physical Science)",
+            "organization": "Ananda Central College, Elpitya",
+            "description": "Completed A/L with distinction in Combined Mathematics, Physics, and Chemistry."
+        },
+        {
+            "type": "education",
+            "year": "2018 - 2019",
+            "title": "O Level (General Science)",
+            "organization": "Ananda Central College, Elpitya",
+            "description": "Completed O Level with distinction in General Science."
+        }
+    ]
+}

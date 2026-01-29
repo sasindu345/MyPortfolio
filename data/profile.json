@@ -1,0 +1,33 @@
+{
+    "name": "Sasindu Wijewardana",
+    "profileImage": "images/Profile.webp",
+    "title": "Full-Stack Developer",
+    "subtitle": "React | Node.js | Spring Boot",
+    "location": "Sri Lanka",
+    "email": "sasindu@example.com",
+    "phone": "+94 XX XXX XXXX",
+    "bio": "Passionate full-stack developer with expertise in building modern web applications. I specialize in React for frontend development and Node.js/Spring Boot for backend services. I love creating clean, efficient, and user-friendly solutions.",
+    "aboutDescription": "I am a dedicated software developer based in Sri Lanka, passionate about creating innovative web solutions. With experience in both frontend and backend technologies, I bring ideas to life through clean code and modern design principles.",
+    "social": {
+        "github": "https://github.com/sasindu345",
+        "linkedin": "https://www.linkedin.com/in/sasindu-jayamadu-659861348/",
+        "facebook": "https://www.facebook.com/share/1ABt6BTiYb/"
+    },
+    "services": [
+        {
+            "title": "DESIGN",
+            "description": "I can design websites based on your needs and suggestions. I create modern, responsive layouts that engage users and deliver great experiences.",
+            "icon": "design"
+        },
+        {
+            "title": "DEVELOPMENT",
+            "description": "Full-stack development with React, Node.js, and Spring Boot. I build scalable web applications with clean architecture and best practices.",
+            "icon": "code"
+        },
+        {
+            "title": "MAINTENANCE",
+            "description": "Ongoing support and maintenance for your applications. I ensure your projects stay up-to-date, secure, and performing optimally.",
+            "icon": "maintenance"
+        }
+    ]
+}

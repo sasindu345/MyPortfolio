@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "icon": "trophy",
+            "year": "2025",
+            "title": "BioFusion 2025",
+            "organization": "University Of Sri Jayawardenepura",
+            "description": "Won 1st Runner-Up in the AI/ML BioFusion Hackathon competition.",
+            "image": "images/achievements/hackathon.webp"
+        }
+    ]
+}
