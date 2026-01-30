@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
+import { useState, useRef } from 'react';
+import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -10,8 +11,12 @@ export default function Contact() {
         message: '',
     });
     const [focused, setFocused] = useState('');
+    const [sending, setSending] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
+    const formRef = useRef();
+
     const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-    const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ threshold: 0.2 });
+    const { ref: formContainerRef, isVisible: formVisible } = useScrollAnimation({ threshold: 0.2 });
 
     const handleChange = (e) => {
         setFormData({
@@ -20,12 +25,51 @@ export default function Contact() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const mailtoLink = `mailto:sasindu@example.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-        )}`;
-        window.location.href = mailtoLink;
+        setSending(true);
+        setStatus({ type: '', message: '' });
+
+        // IMPORTANT: Replace these with your EmailJS credentials
+        // Get them from: https://www.emailjs.com/
+        const serviceID = 'service_k0gpapy';  // Replace with your EmailJS Service ID
+        const templateID = 'template_vjyjr27'; // Replace with your EmailJS Template ID
+        const publicKey = 'zFI8fXH2HgQkvOS-F';   // Replace with your EmailJS Public Key
+
+        try {
+            const result = await emailjs.sendForm(
+                serviceID,
+                templateID,
+                formRef.current,
+                publicKey
+            );
+
+            console.log('Email sent successfully:', result.text);
+            setStatus({
+                type: 'success',
+                message: 'Message sent successfully! I\'ll get back to you soon.'
+            });
+
+            // Reset form
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: '',
+            });
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setStatus({
+                type: 'error',
+                message: 'Failed to send message. Please try again or email me directly.'
+            });
+        } finally {
+            setSending(false);
+            // Clear status message after 5 seconds
+            setTimeout(() => {
+                setStatus({ type: '', message: '' });
+            }, 5000);
+        }
     };
 
     const inputFields = [
@@ -67,7 +111,7 @@ export default function Contact() {
                     className={`max-w-2xl mx-auto px-2 transition-all duration-700 delay-200 ${formVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                         }`}
                 >
-                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+                    <div ref={formContainerRef} className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                         {inputFields.slice(0, 2).map((field, index) => (
                             <div
                                 key={field.name}
@@ -82,12 +126,13 @@ export default function Contact() {
                                     onFocus={() => setFocused(field.name)}
                                     onBlur={() => setFocused('')}
                                     required={field.required}
-                                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer"
+                                    disabled={sending}
+                                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
                                     placeholder={field.label}
                                 />
                                 <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData[field.name] || focused === field.name
-                                        ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                                        : 'top-3 md:top-4 text-white/40'
+                                    ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
+                                    : 'top-3 md:top-4 text-white/40'
                                     }`}>
                                     {field.label}{field.required && '*'}
                                 </label>
@@ -103,12 +148,13 @@ export default function Contact() {
                             onChange={handleChange}
                             onFocus={() => setFocused('phone')}
                             onBlur={() => setFocused('')}
-                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer"
+                            disabled={sending}
+                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
                             placeholder="Phone Number"
                         />
                         <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData.phone || focused === 'phone'
-                                ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                                : 'top-3 md:top-4 text-white/40'
+                            ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
+                            : 'top-3 md:top-4 text-white/40'
                             }`}>
                             Phone Number
                         </label>
@@ -122,25 +168,42 @@ export default function Contact() {
                             onFocus={() => setFocused('message')}
                             onBlur={() => setFocused('')}
                             required
+                            disabled={sending}
                             rows={4}
-                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors resize-none peer"
+                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors resize-none peer disabled:opacity-50 disabled:cursor-not-allowed"
                             placeholder="Your Message"
                         />
                         <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData.message || focused === 'message'
-                                ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                                : 'top-3 md:top-4 text-white/40'
+                            ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
+                            : 'top-3 md:top-4 text-white/40'
                             }`}>
                             Your Message*
                         </label>
                     </div>
 
+                    {/* Status Message */}
+                    {status.message && (
+                        <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${status.type === 'success'
+                            ? 'bg-green-500/10 border border-green-500/30 text-green-300'
+                            : 'bg-red-500/10 border border-red-500/30 text-red-300'
+                            }`}>
+                            {status.type === 'success' ? (
+                                <FaCheckCircle className="w-5 h-5 flex-shrink-0" />
+                            ) : (
+                                <FaExclamationCircle className="w-5 h-5 flex-shrink-0" />
+                            )}
+                            <span className="text-sm md:text-base">{status.message}</span>
+                        </div>
+                    )}
+
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="group w-full md:w-auto px-8 md:px-10 py-3 md:py-4 bg-white text-black font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-gray-200 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2 md:gap-3"
+                        disabled={sending}
+                        className="group w-full md:w-auto px-8 md:px-10 py-3 md:py-4 bg-white text-black font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-gray-200 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2 md:gap-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                     >
-                        <span>Send Message</span>
-                        <FaPaperPlane className="w-3 h-3 md:w-4 md:h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        <span>{sending ? 'Sending...' : 'Send Message'}</span>
+                        <FaPaperPlane className={`w-3 h-3 md:w-4 md:h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ${sending ? 'animate-pulse' : ''}`} />
                     </button>
                 </form>
             </div>

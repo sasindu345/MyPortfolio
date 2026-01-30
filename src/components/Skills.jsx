@@ -1,10 +1,10 @@
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaFigma,
-    FaDatabase, FaLanguage, FaMicrochip
+    FaDatabase, FaLanguage, FaMicrochip, FaCloud, FaBrain, FaChartBar
 } from 'react-icons/fa';
 import {
     SiTypescript, SiMongodb, SiMysql, SiTailwindcss, SiSpringboot,
-    SiCplusplus, SiC, SiArduino
+    SiCplusplus, SiC, SiArduino, SiDocker, SiPython
 } from 'react-icons/si';
 import { useScrollAnimation, useStaggerAnimation } from '../hooks/useScrollAnimation';
 
@@ -26,6 +26,12 @@ const iconComponents = {
     arduino: SiArduino,
     language: FaLanguage,
     database: FaDatabase,
+    // New icons for Cloud, AI & Data
+    cloud: FaCloud,
+    docker: SiDocker,
+    python: SiPython,
+    ai: FaBrain,
+    data: FaChartBar,
     default: FaMicrochip,
 };
 

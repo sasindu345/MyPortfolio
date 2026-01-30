@@ -35,12 +35,27 @@ export default function Navbar() {
             : 'bg-black/50 backdrop-blur-sm'
             }`}>
             <div className="h-14 md:h-16 px-4 md:px-6 lg:px-12 flex items-center justify-between max-w-7xl mx-auto">
-                {/* Logo */}
-                <div className="flex items-center group cursor-pointer">
-                    <div className="w-10 h-10 md:w-11 md:h-11  flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg">
-                        <span className="text-black font-bold text-sm md:text-base font-montserrat"></span>
+                {/* Logo/Name */}
+                <button
+                    onClick={() => scrollToSection('hero')}
+                    className="group flex items-center gap-2 cursor-pointer"
+                >
+                    {/* Animated Initial */}
+                    <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-lg bg-white flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg group-hover:shadow-white/30">
+                        <span className="text-black font-bold text-lg md:text-xl font-montserrat">S</span>
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-50 blur-md transition-opacity duration-300"></div>
                     </div>
-                </div>
+
+                    {/* Name Text */}
+                    <div className="relative overflow-hidden">
+                        <span className="text-white font-bold text-lg md:text-xl font-raleway tracking-wide group-hover:text-white transition-colors duration-300">
+                            Sasindu
+                        </span>
+                        {/* Animated underline */}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-white via-gray-300 to-white group-hover:w-full transition-all duration-500 ease-out"></span>
+                    </div>
+                </button>
 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center gap-1">

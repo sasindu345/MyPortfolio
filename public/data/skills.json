@@ -1,7 +1,7 @@
 {
     "categories": [
         {
-            "title": "USING NOW:",
+            "title": "CORE SKILLS (USING NOW):",
             "skills": [
                 {
                     "name": "HTML5",
@@ -14,42 +14,42 @@
                     "color": "#1572B6"
                 },
                 {
-                    "name": "JAVASCRIPT",
+                    "name": "JavaScript",
                     "icon": "javascript",
                     "color": "#F7DF1E"
                 },
                 {
-                    "name": "REACT",
+                    "name": "React",
                     "icon": "react",
                     "color": "#61DAFB"
                 },
                 {
-                    "name": "TAILWIND",
+                    "name": "Tailwind CSS",
                     "icon": "tailwind",
                     "color": "#06B6D4"
                 },
                 {
-                    "name": "GIT",
+                    "name": "Git & GitHub",
                     "icon": "git",
                     "color": "#F05032"
                 },
                 {
-                    "name": "FIGMA",
+                    "name": "Figma",
                     "icon": "figma",
                     "color": "#F24E1E"
                 }
             ]
         },
         {
-            "title": "LEARNING:",
+            "title": "BACKEND & DATABASE (LEARNING & USING):",
             "skills": [
                 {
-                    "name": "NODEJS",
+                    "name": "Node.js",
                     "icon": "nodejs",
                     "color": "#339933"
                 },
                 {
-                    "name": "SPRING BOOT",
+                    "name": "Spring Boot",
                     "icon": "spring",
                     "color": "#6DB33F"
                 },
@@ -59,14 +59,34 @@
                     "color": "#4479A1"
                 },
                 {
-                    "name": "MONGODB",
+                    "name": "MongoDB",
                     "icon": "mongodb",
                     "color": "#47A248"
                 },
                 {
-                    "name": "TYPESCRIPT",
+                    "name": "TypeScript",
                     "icon": "typescript",
                     "color": "#3178C6"
+                }
+            ]
+        },
+        {
+            "title": "CLOUD, AI & DATA (BEGINNER / LEARNING):",
+            "skills": [
+                {
+                    "name": "Docker (Basics)",
+                    "icon": "docker",
+                    "color": "#2496ED"
+                },
+                {
+                    "name": "Python",
+                    "icon": "python",
+                    "color": "#3776AB"
+                },
+                {
+                    "name": "Data Science",
+                    "icon": "data",
+                    "color": "#10B981"
                 }
             ]
         },
@@ -74,14 +94,9 @@
             "title": "OTHER SKILLS:",
             "skills": [
                 {
-                    "name": "ENGLISH",
+                    "name": "English ",
                     "icon": "language",
                     "color": "#4B5563"
-                },
-                {
-                    "name": "C++",
-                    "icon": "cplusplus",
-                    "color": "#00599C"
                 },
                 {
                     "name": "C",
@@ -89,7 +104,12 @@
                     "color": "#A8B9CC"
                 },
                 {
-                    "name": "ARDUINO",
+                    "name": "C++",
+                    "icon": "cplusplus",
+                    "color": "#00599C"
+                },
+                {
+                    "name": "Arduino",
                     "icon": "arduino",
                     "color": "#00979D"
                 }

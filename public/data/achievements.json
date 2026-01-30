@@ -6,7 +6,17 @@
             "title": "BioFusion 2025",
             "organization": "University Of Sri Jayawardenepura",
             "description": "Won 1st Runner-Up in the AI/ML BioFusion Hackathon competition.",
-            "image": "images/achievements/hackathon.webp"
+            "image": "images/achievements/BioFusion.jpeg",
+            "placement": "Runners Up"
+        },
+        {
+            "icon": "award",
+            "year": "2025",
+            "title": "OCTWAVE 2.0",
+            "organization": "IEEE Student Branch, University of Moratuwa",
+            "description": "Selected as finalists at OCTWAVE 2.0, an AI and data science–focused innovation competition where teams presented intelligent, data-driven solutions.",
+            "image": "images/achievements/octwave.jpeg",
+            "placement": "Finalist"
         }
     ]
 }

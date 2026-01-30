@@ -15,19 +15,19 @@ export default function Hero({ profile }) {
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-900"></div>
 
-            {/* Profile Image - Positioned on right side */}
-            <div className="absolute inset-0 flex justify-end items-center overflow-hidden">
+            {/* Profile Image - Top on mobile, right-aligned on desktop */}
+            <div className="absolute inset-0 flex justify-center lg:justify-end items-start lg:items-center overflow-hidden">
                 {profile?.profileImage && (
                     <>
                         <img
                             src={profile.profileImage}
                             alt=""
-                            className="h-[90%] lg:h-[85%] w-auto object-contain object-bottom mr-[-5%] lg:mr-[5%] opacity-90"
+                            className="h-[45%] sm:h-[50%] md:h-[55%] lg:h-[85%] w-auto max-w-[90%] lg:max-w-full object-contain object-top lg:object-bottom mt-16 lg:mt-0 lg:mr-[5%] opacity-90"
                         />
                         {/* Gradient overlays */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 lg:from-black lg:via-black/70 lg:to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent lg:from-black lg:via-transparent lg:to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black lg:from-black/60 lg:via-transparent lg:to-transparent"></div>
                     </>
                 )}
             </div>

@@ -1,13 +1,13 @@
 {
     "name": "Sasindu Wijewardana",
     "profileImage": "images/Profile.webp",
-    "title": "Full-Stack Developer",
-    "subtitle": "React | Node.js | Spring Boot",
+    "title": "Software Engineer | Aspiring Cloud & AI Engineer",
+    "subtitle": "Full-Stack Web • Cloud Computing • AI/ML Fundamentals",
     "location": "Sri Lanka",
-    "email": "sasindu@example.com",
-    "phone": "+94 XX XXX XXXX",
-    "bio": "Passionate full-stack developer with expertise in building modern web applications. I specialize in React for frontend development and Node.js/Spring Boot for backend services. I love creating clean, efficient, and user-friendly solutions.",
-    "aboutDescription": "I am a dedicated software developer based in Sri Lanka, passionate about creating innovative web solutions. With experience in both frontend and backend technologies, I bring ideas to life through clean code and modern design principles.",
+    "email": "jayamadusasindu5@gmail.com",
+    "phone": "+94767349531",
+    "bio": "Software engineering student with a strong foundation in full-stack web development, currently expanding skills in cloud computing, AI/ML, and data-driven systems. Passionate about building scalable applications and understanding how modern cloud and intelligent systems work in real-world products.",
+    "aboutDescription": "I am a software engineering student based in Sri Lanka with hands-on experience in full-stack web development. Alongside building web applications, I am actively learning cloud computing, AI/ML, and data science fundamentals to understand how large-scale, intelligent systems are designed and deployed. I enjoy learning by building projects, experimenting with new technologies, and continuously improving my technical depth.",
     "social": {
         "github": "https://github.com/sasindu345",
         "linkedin": "https://www.linkedin.com/in/sasindu-jayamadu-659861348/",
@@ -15,19 +15,19 @@
     },
     "services": [
         {
-            "title": "DESIGN",
-            "description": "I can design websites based on your needs and suggestions. I create modern, responsive layouts that engage users and deliver great experiences.",
-            "icon": "design"
-        },
-        {
-            "title": "DEVELOPMENT",
-            "description": "Full-stack development with React, Node.js, and Spring Boot. I build scalable web applications with clean architecture and best practices.",
+            "title": "FULL-STACK DEVELOPMENT",
+            "description": "Building responsive and scalable web applications using React, Node.js, and Spring Boot with clean architecture and best practices.",
             "icon": "code"
         },
         {
-            "title": "MAINTENANCE",
-            "description": "Ongoing support and maintenance for your applications. I ensure your projects stay up-to-date, secure, and performing optimally.",
-            "icon": "maintenance"
+            "title": "CLOUD FUNDAMENTALS",
+            "description": "Learning and implementing cloud concepts such as deployment, containers, and basic cloud services through hands-on projects.",
+            "icon": "cloud"
+        },
+        {
+            "title": "AI & DATA LEARNING",
+            "description": "Exploring AI/ML and data science fundamentals including data handling, model basics, and real-world use cases.",
+            "icon": "ai"
         }
     ]
 }
