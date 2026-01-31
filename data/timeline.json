@@ -2,10 +2,10 @@
     "items": [
         {
             "type": "education",
-            "year": "2024 - Present",
-            "title": "Bachelor of Science in Information Technology",
-            "organization": "University of Moratuwa",
-            "description": "Pursuing a degree in Information Technology with focus on web technologies and software engineering."
+            "year": "2018 - 2019",
+            "title": "O Level (General Science)",
+            "organization": "Ananda Central College, Elpitya",
+            "description": "Completed O Level with distinction in General Science."
         },
         {
             "type": "education",
@@ -16,10 +16,25 @@
         },
         {
             "type": "education",
-            "year": "2018 - 2019",
-            "title": "O Level (General Science)",
-            "organization": "Ananda Central College, Elpitya",
-            "description": "Completed O Level with distinction in General Science."
+            "year": "2024 - Present",
+            "title": "Bachelor of Science in Information Technology",
+            "organization": "University of Moratuwa",
+            "description": "Pursuing a degree in Information Technology with focus on web technologies and software engineering."
+        },
+        {
+            "type": "milestone",
+            "year": "2024",
+            "title": "Started Full-Stack Web Development",
+            "organization": "Self Learning",
+            "description": "Began building full-stack applications using modern web technologies."
+        },
+        {
+            "type": "milestone",
+            "year": "2025",
+            "title": "AI/ML BioFusion Hackathon – 1st Runner-Up",
+            "organization": "National Level Hackathon",
+            "description": "Built an AI-powered e-learning platform and gained national-level recognition.",
+            "highlight": "Ranked 2nd among 100+ teams"
         }
     ]
 }
