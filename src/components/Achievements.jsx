@@ -102,7 +102,7 @@ export default function Achievements({ achievements }) {
                         return (
                             <div
                                 key={index}
-                                className={`group relative bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden ${isItemVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
+                                className={`group relative bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden h-full flex flex-col ${isItemVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
                                     }`}
                             >
                                 {/* Image Area */}
@@ -154,7 +154,7 @@ export default function Achievements({ achievements }) {
                                 )}
 
                                 {/* Content */}
-                                <div className="p-4 md:p-6">
+                                <div className="p-4 md:p-6 flex-1 flex flex-col">
                                     {/* Placement Badge - Now in content area */}
                                     {achievement.placement && placementStyle && (
                                         <div className="flex items-center gap-2 mb-3">
@@ -178,7 +178,7 @@ export default function Achievements({ achievements }) {
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-white/40 text-xs md:text-sm leading-relaxed mb-4">
+                                    <p className="text-white/40 text-xs md:text-sm leading-relaxed mb-4 line-clamp-2 flex-1">
                                         {achievement.description}
                                     </p>
                                 </div>
