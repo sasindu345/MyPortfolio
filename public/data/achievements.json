@@ -1,4 +1,26 @@
 {
+    "_instructions": {
+        "howToUpdate": "Add new achievements to the 'items' array below. Each achievement should follow the structure defined here.",
+        "structure": {
+            "icon": "Icon type: 'trophy', 'medal', 'certificate', 'award', or 'star' (required)",
+            "year": "Year of achievement - e.g., '2025' (required)",
+            "title": "Event/Competition name - max 30 characters (required)",
+            "organization": "Organizing body name - max 50 characters (required)",
+            "description": "Brief description - MAX 80 CHARACTERS for best display (required)",
+            "image": "Path to image file in 'images/achievements/' (optional)",
+            "placement": "Award position: 'Winner', '1st Place', 'Runners Up', 'Finalist', '4th Runner-Up' etc. (required)"
+        },
+        "maxDescriptionWords": 15,
+        "maxDescriptionChars": 80,
+        "iconOptions": [
+            "trophy",
+            "medal",
+            "certificate",
+            "award",
+            "star"
+        ],
+        "note": "Keep descriptions concise. Focus on what you achieved, not the competition details."
+    },
     "items": [
         {
             "icon": "trophy",
@@ -14,9 +36,18 @@
             "year": "2025",
             "title": "OCTWAVE 2.0",
             "organization": "IEEE Student Branch, University of Moratuwa",
-            "description": "Selected as finalists at OCTWAVE 2.0, an AI and data science–focused innovation competition where teams presented intelligent, data-driven solutions.",
+            "description": "Finalist at OCTWAVE 2.0, presenting AI and data-driven solutions.",
             "image": "images/achievements/octwave.jpeg",
             "placement": "Finalist"
+        },
+        {
+            "icon": "award",
+            "year": "2025",
+            "title": "Mini Hackathon 2025",
+            "organization": "Stat Circle, University of Colombo",
+            "description": "4th Runner-Up presenting a data-driven solution at the hackathon.",
+            "image": "images/achievements/mini_hackathon.jpg",
+            "placement": "4th Runner-Up"
         }
     ]
 }

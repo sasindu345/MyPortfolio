@@ -24,21 +24,21 @@ const getPlacementStyle = (placement) => {
         };
     } else if (normalizedPlacement.includes('runner') || normalizedPlacement.includes('2nd')) {
         return {
-            bg: 'bg-slate-300/20',
-            text: 'text-slate-200',
-            border: 'border-slate-300/30',
-            glow: 'shadow-slate-400/20',
+            bg: 'bg-white/15',
+            text: 'text-white/80',
+            border: 'border-white/25',
+            glow: 'shadow-white/15',
             icon: FaMedal,
-            accentGradient: 'from-slate-400/40 via-slate-300/20 to-slate-400/40'
+            accentGradient: 'from-white/30 via-white/15 to-white/30'
         };
     } else if (normalizedPlacement.includes('finalist') || normalizedPlacement.includes('3rd')) {
         return {
-            bg: 'bg-orange-600/20',
-            text: 'text-orange-200',
-            border: 'border-orange-400/30',
-            glow: 'shadow-orange-600/20',
+            bg: 'bg-white/15',
+            text: 'text-white/80',
+            border: 'border-white/25',
+            glow: 'shadow-white/15',
             icon: FaMedal,
-            accentGradient: 'from-orange-500/40 via-orange-400/20 to-orange-500/40'
+            accentGradient: 'from-white/30 via-white/15 to-white/30'
         };
     } else if (normalizedPlacement.includes('participant') || normalizedPlacement.includes('participation')) {
         return {
@@ -178,7 +178,7 @@ export default function Achievements({ achievements }) {
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-white/40 text-xs md:text-sm leading-relaxed mb-4 line-clamp-2 flex-1">
+                                    <p className="text-white/40 text-xs md:text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
                                         {achievement.description}
                                     </p>
                                 </div>

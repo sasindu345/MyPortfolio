@@ -12,15 +12,11 @@ const categoryIcons = {
     OTHER: FaRocket,
 };
 
-// Gradient themes for cards
-const cardThemes = [
-    { gradient: 'from-violet-500/20 via-purple-500/10 to-fuchsia-500/20', accent: 'violet' },
-    { gradient: 'from-cyan-500/20 via-blue-500/10 to-indigo-500/20', accent: 'cyan' },
-    { gradient: 'from-emerald-500/20 via-green-500/10 to-teal-500/20', accent: 'emerald' },
-    { gradient: 'from-orange-500/20 via-amber-500/10 to-yellow-500/20', accent: 'orange' },
-    { gradient: 'from-rose-500/20 via-pink-500/10 to-red-500/20', accent: 'rose' },
-    { gradient: 'from-sky-500/20 via-cyan-500/10 to-blue-500/20', accent: 'sky' },
-];
+// Consistent gradient theme for all cards
+const cardTheme = {
+    gradient: 'from-violet-500/20 via-purple-500/10 to-fuchsia-500/20',
+    accent: 'violet'
+};
 
 export default function Projects({ projects }) {
     const [activeFilter, setActiveFilter] = useState('ALL');
@@ -66,8 +62,8 @@ export default function Projects({ projects }) {
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
                             className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${activeFilter === filter
-                                    ? 'bg-white text-black shadow-lg'
-                                    : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/10'
+                                ? 'bg-white text-black shadow-lg'
+                                : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/10'
                                 }`}
                         >
                             {filter}
@@ -79,17 +75,16 @@ export default function Projects({ projects }) {
                 <div ref={containerRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {filteredProjects.map((project, index) => {
                         const isItemVisible = visibleItems.includes(index);
-                        const theme = cardThemes[index % cardThemes.length];
                         const CategoryIcon = categoryIcons[project.category?.toUpperCase()] || FaCode;
 
                         return (
                             <div
                                 key={project.id || index}
-                                className={`group relative bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 ${isItemVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
+                                className={`group relative bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 h-full flex flex-col ${isItemVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
                                     }`}
                             >
                                 {/* Decorative Header with Gradient */}
-                                <div className={`relative h-40 md:h-48 bg-gradient-to-br ${theme.gradient} overflow-hidden`}>
+                                <div className={`relative h-40 md:h-48 bg-gradient-to-br ${cardTheme.gradient} overflow-hidden`}>
                                     {/* Animated Pattern */}
                                     <div className="absolute inset-0 opacity-30">
                                         <div className="absolute top-4 left-4 w-20 h-20 border border-white/20 rounded-full"></div>
@@ -144,7 +139,7 @@ export default function Projects({ projects }) {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-4 md:p-6">
+                                <div className="p-4 md:p-6 flex-1 flex flex-col">
                                     <div className="flex items-center gap-2 mb-2">
                                         <span className="px-2 py-0.5 bg-white/10 text-white/60 text-[10px] md:text-xs font-semibold uppercase tracking-wider rounded-md">
                                             {project.category || 'Project'}
@@ -155,12 +150,12 @@ export default function Projects({ projects }) {
                                         {project.title}
                                     </h3>
 
-                                    <p className="text-white/50 text-xs md:text-sm leading-relaxed mb-4">
-                                        {project.description?.substring(0, 100)}...
+                                    <p className="text-white/50 text-xs md:text-sm leading-relaxed mb-4 line-clamp-3">
+                                        {project.description}
                                     </p>
 
                                     {/* Technologies */}
-                                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                                    <div className="flex flex-wrap gap-1.5 md:gap-2 mt-auto">
                                         {project.technologies?.slice(0, 4).map((tech, i) => (
                                             <span
                                                 key={i}
@@ -173,7 +168,7 @@ export default function Projects({ projects }) {
                                 </div>
 
                                 {/* Bottom Accent Line */}
-                                <div className={`h-1 bg-gradient-to-r ${theme.gradient} opacity-50 group-hover:opacity-100 transition-opacity`}></div>
+                                <div className={`h-1 bg-gradient-to-r ${cardTheme.gradient} opacity-50 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
                         );
                     })}

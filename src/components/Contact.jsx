@@ -127,12 +127,12 @@ export default function Contact() {
                                     onBlur={() => setFocused('')}
                                     required={field.required}
                                     disabled={sending}
-                                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full px-4 md:px-6 pt-5 md:pt-6 pb-2 md:pb-3 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
                                     placeholder={field.label}
                                 />
                                 <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData[field.name] || focused === field.name
-                                    ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                                    : 'top-3 md:top-4 text-white/40'
+                                    ? 'top-1 md:top-1.5 text-[10px] md:text-xs text-white/70'
+                                    : 'top-3.5 md:top-4 text-white/40'
                                     }`}>
                                     {field.label}{field.required && '*'}
                                 </label>
@@ -149,12 +149,12 @@ export default function Contact() {
                             onFocus={() => setFocused('phone')}
                             onBlur={() => setFocused('')}
                             disabled={sending}
-                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full px-4 md:px-6 pt-5 md:pt-6 pb-2 md:pb-3 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors peer disabled:opacity-50 disabled:cursor-not-allowed"
                             placeholder="Phone Number"
                         />
                         <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData.phone || focused === 'phone'
-                            ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                            : 'top-3 md:top-4 text-white/40'
+                            ? 'top-1 md:top-1.5 text-[10px] md:text-xs text-white/70'
+                            : 'top-3.5 md:top-4 text-white/40'
                             }`}>
                             Phone Number
                         </label>
@@ -170,12 +170,12 @@ export default function Contact() {
                             required
                             disabled={sending}
                             rows={4}
-                            className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors resize-none peer disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full px-4 md:px-6 pt-5 md:pt-6 pb-2 md:pb-3 bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl border border-white/10 text-white text-sm md:text-base placeholder-transparent focus:outline-none focus:border-white/50 transition-colors resize-none peer disabled:opacity-50 disabled:cursor-not-allowed"
                             placeholder="Your Message"
                         />
                         <label className={`absolute left-4 md:left-6 transition-all duration-300 pointer-events-none text-sm md:text-base ${formData.message || focused === 'message'
-                            ? 'top-0.5 md:top-1 text-[10px] md:text-xs text-white/70'
-                            : 'top-3 md:top-4 text-white/40'
+                            ? 'top-1 md:top-1.5 text-[10px] md:text-xs text-white/70'
+                            : 'top-3.5 md:top-4 text-white/40'
                             }`}>
                             Your Message*
                         </label>
