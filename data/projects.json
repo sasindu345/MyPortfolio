@@ -1,10 +1,28 @@
 {
+    "_instructions": {
+        "howToUpdate": "Add new projects to the 'projects' array below. Each project should follow the structure defined here.",
+        "structure": {
+            "id": "Unique number for the project (required)",
+            "title": "Project title - max 30 characters (required)",
+            "subtitle": "Brief subtitle like 'coded, designed' - max 20 characters (optional)",
+            "description": "Project description - MAX 80 CHARACTERS for best display (required)",
+            "image": "Image URL - not displayed but kept for reference (optional)",
+            "technologies": "Array of tech stack items - max 4 items recommended (required)",
+            "category": "Project status: 'finished' or 'ongoing' (required)",
+            "demoUrl": "Live demo or project URL (optional)",
+            "sourceUrl": "GitHub repository URL (optional)",
+            "featured": "true to highlight the project (optional)"
+        },
+        "maxDescriptionWords": 15,
+        "maxDescriptionChars": 80,
+        "note": "Keep descriptions concise and impactful. Focus on what the project does, not how."
+    },
     "projects": [
         {
             "id": 2,
             "title": "Resume Builder",
             "subtitle": "coded, designed",
-            "description": "A full-stack Resume Builder web application that helps users create ATS-friendly resumes with live preview and PDF export.",
+            "description": "Full-stack web app for creating ATS-friendly resumes with live preview and PDF export.",
             "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=640&h=400&fit=crop",
             "technologies": [
                 "React",
@@ -21,7 +39,7 @@
             "id": 3,
             "title": "MazeMaster",
             "subtitle": "coded",
-            "description": "2-player Arduino-based maze game with dynamic walls, RFID scoring, and ESP32 car control. An exciting embedded systems project.",
+            "description": "2-player Arduino maze game with dynamic walls, RFID scoring, and ESP32 car control.",
             "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&h=400&fit=crop",
             "technologies": [
                 "C++",
