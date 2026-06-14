@@ -63,21 +63,23 @@ export default function Timeline({ timeline }) {
 
                                     {/* Content Card */}
                                     <div className={`ml-12 md:ml-0 md:w-[calc(50%-40px)] ${isLeft ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                                        <div className="glass-card glass-card-hover p-4 md:p-6 group">
-                                            {/* Year Badge */}
-                                            <span className="inline-block px-3 py-1 bg-amber-500/10 text-amber-500 text-xs font-bold rounded-full mb-3 border border-amber-500/20 font-montserrat">
-                                                {item.year}
-                                            </span>
+                                        <div className="glass-card glass-card-hover p-4 md:p-6 group flex flex-col justify-start min-h-[200px] sm:min-h-[180px] md:min-h-[210px] lg:min-h-[190px]">
+                                            <div>
+                                                {/* Year Badge */}
+                                                <span className="inline-block px-3 py-1 bg-amber-500/10 text-amber-500 text-xs font-bold rounded-full mb-3 border border-amber-500/20 font-montserrat">
+                                                    {item.year}
+                                                </span>
 
-                                            <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300 font-raleway">
-                                                {item.title}
-                                            </h3>
+                                                <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300 font-raleway">
+                                                    {item.title}
+                                                </h3>
 
-                                            <p className="text-slate-300/80 text-sm mb-2 font-semibold font-opensans">
-                                                {item.organization}
-                                            </p>
+                                                <p className="text-slate-300/80 text-sm mb-2 font-semibold font-opensans">
+                                                    {item.organization}
+                                                </p>
+                                            </div>
 
-                                            <p className="text-slate-300/60 text-xs md:text-sm leading-relaxed font-opensans">
+                                            <p className="text-slate-300/60 text-xs md:text-sm leading-relaxed font-opensans mt-auto">
                                                 {item.description}
                                             </p>
                                         </div>

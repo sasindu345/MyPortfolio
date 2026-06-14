@@ -1,40 +1,39 @@
 {
     "items": [
         {
-            "type": "education",
-            "year": "2018 - 2019",
-            "title": "O Level (General Science)",
-            "organization": "Ananda Central College, Elpitya",
-            "description": "Completed O Level with distinction in General Science."
-        },
-        {
-            "type": "education",
-            "year": "2020 - 2022",
-            "title": "Advanced Level (Physical Science)",
-            "organization": "Ananda Central College, Elpitya",
-            "description": "Completed A/L with distinction in Combined Mathematics, Physics, and Chemistry."
-        },
-        {
-            "type": "education",
-            "year": "2024 - Present",
-            "title": "Bachelor of Science in Information Technology",
-            "organization": "University of Moratuwa",
-            "description": "Pursuing a degree in Information Technology with focus on web technologies and software engineering."
+            "type": "work",
+            "year": "Jan 2025 - Present",
+            "title": "Software Developer",
+            "organization": "Gmora (Startup)",
+            "description": "Developing scalable features using React, TypeScript, and Tailwind. Architected robust backend solutions using Spring Boot, Node.js, and PostgreSQL."
         },
         {
             "type": "milestone",
-            "year": "2024",
-            "title": "Started Full-Stack Web Development",
-            "organization": "Self Learning",
-            "description": "Began building full-stack applications using modern web technologies."
+            "year": "Apr 2026",
+            "title": "AWS & ML Certifications",
+            "organization": "Coursera & Kaggle",
+            "description": "Completed AWS Cloud Technical Essentials and Kaggle Intermediate Machine Learning to build foundational knowledge in cloud systems and predictive models."
         },
         {
             "type": "milestone",
             "year": "2025",
-            "title": "AI/ML BioFusion Hackathon – 1st Runner-Up",
-            "organization": "National Level Hackathon",
-            "description": "Built an AI-powered e-learning platform and gained national-level recognition.",
-            "highlight": "Ranked 2nd among 100+ teams"
+            "title": "National Hackathons & CTFs",
+            "organization": "UoJP, UoM & SLTC",
+            "description": "Won 1st Runner-Up at BioFusion, 2nd Runner-Up at Zero-Day CTF, 4th Runner-Up at Colombo Mini Hackathon, and competed as a finalist in IEEE OCTWAVE 2.0."
+        },
+        {
+            "type": "education",
+            "year": "2023 - Present",
+            "title": "BSc (Hons) in Information Technology",
+            "organization": "University of Moratuwa, Sri Lanka",
+            "description": "Undergraduate student. GPA: 3.44 / 4.00. Focus areas include Data Structures, Object-Oriented Programming, Database Systems, and Web Technologies."
+        },
+        {
+            "type": "education",
+            "year": "2022",
+            "title": "G.C.E. Advanced Level",
+            "organization": "Ananda Central College, Elpitiya",
+            "description": "Completed Advanced Level in the Physical Science Stream. Achieved A grade in Combined Mathematics, and B grades in Chemistry and Physics."
         }
     ]
 }

@@ -66,16 +66,16 @@
         },
         {
             "id": 4,
-            "title": "Quizly",
+            "title": "Quizzly Edu",
             "subtitle": "client project",
-            "description": "Interactive quiz platform with scoring and analytics.",
+            "description": "Interactive medical learning and quiz platform with analytics.",
             "technologies": [
                 "React",
                 "Node.js",
                 "PostgreSQL"
             ],
             "category": "finished",
-            "demoUrl": "https://quizly.lk",
+            "demoUrl": "https://quizzlyedu.com",
             "featured": true
         },
         {
@@ -90,7 +90,8 @@
                 "Docker"
             ],
             "category": "ongoing",
-            "demoUrl": "Private Client Project",
+            "demoUrl": "https://github.com/CodeMIndsUoM",
+            "sourceUrl": "https://github.com/CodeMIndsUoM",
             "featured": true
         },
         {
@@ -104,7 +105,9 @@
                 "Canvas",
                 "Node.js"
             ],
-            "category": "finished"
+            "category": "finished",
+            "demoUrl": "https://github.com/sasindu345/smart-ai-painter",
+            "sourceUrl": "https://github.com/sasindu345/smart-ai-painter"
         }
     ],
     "filters": [
