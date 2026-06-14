@@ -15,19 +15,19 @@ export default function Hero({ profile }) {
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#070f1d] to-[#0a1628]"></div>
 
-            {/* Profile Image - Top on mobile, right-aligned on desktop */}
-            <div className="absolute inset-0 flex justify-center lg:justify-end items-start lg:items-center overflow-hidden">
+            {/* Profile Image - Desktop only */}
+            <div className="hidden lg:flex absolute inset-0 justify-end items-center overflow-hidden">
                 {profile?.profileImage && (
                     <>
                         <img
                             src={profile.profileImage}
                             alt=""
-                            className="h-[45%] sm:h-[50%] md:h-[55%] lg:h-[85%] w-auto max-w-[90%] lg:max-w-full object-contain object-top lg:object-bottom mt-16 lg:mt-0 lg:mr-[5%] opacity-90 relative z-10"
+                            className="h-[85%] w-auto object-contain object-bottom mr-[5%] opacity-90 relative z-10"
                         />
-                        {/* Gradient overlays matching Navy Base instead of Black */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/70 via-transparent to-[#0a1628]/70 lg:from-[#0a1628] lg:via-[#0a1628]/70 lg:to-transparent z-10"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent lg:from-[#0a1628] lg:via-transparent lg:to-transparent z-10"></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1628] lg:from-[#0a1628]/60 lg:via-transparent lg:to-transparent z-10"></div>
+                        {/* Gradient overlays matching Navy Base */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/70 to-transparent z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1628] z-10"></div>
                     </>
                 )}
             </div>
@@ -47,10 +47,27 @@ export default function Hero({ profile }) {
             <div className="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
 
             {/* Content */}
-            <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-12 min-h-screen flex items-center">
+            <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-12 min-h-screen flex items-center justify-center lg:justify-start">
                 <div className="w-full lg:max-w-2xl">
                     {/* Left Content */}
-                    <div className="pt-24 pb-20 lg:pt-0 lg:pb-0 text-center lg:text-left animate-fade-in">
+                    <div className="pt-20 pb-12 lg:pt-0 lg:pb-0 text-center lg:text-left animate-fade-in">
+                        {/* Profile Image - Mobile only (Pop-out Avatar effect) */}
+                        {profile?.profileImage && (
+                            <div className="block lg:hidden mb-6 w-full flex justify-center">
+                                <div className="relative w-44 h-44 sm:w-52 sm:h-52">
+                                    {/* Background circle with gradient & border */}
+                                    <div className="absolute inset-2 rounded-full bg-gradient-to-b from-amber-500/20 to-indigo-500/20 border border-amber-500/25 shadow-2xl"></div>
+                                    {/* Glow effect */}
+                                    <div className="absolute -inset-1 bg-gradient-to-tr from-amber-500/15 to-indigo-500/15 rounded-full blur-xl opacity-80 animate-pulse"></div>
+                                    {/* Profile Image popping out at the top */}
+                                    <img
+                                        src={profile.profileImage}
+                                        alt={profile.name || "Sasindu Wijewardana"}
+                                        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[120%] w-auto max-w-none object-contain z-10 drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
+                                    />
+                                </div>
+                            </div>
+                        )}
                         <p className="text-amber-500 text-sm md:text-base font-bold font-montserrat mb-3 md:mb-4 tracking-widest uppercase">
                             Hi, I am
                         </p>

@@ -12,6 +12,18 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Disable body scrolling when mobile menu is open
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [mobileMenuOpen]);
+
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -30,7 +42,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${(scrolled || mobileMenuOpen)
             ? 'bg-[#070f1d]/95 backdrop-blur-xl shadow-2xl border-b border-slate-800/50'
             : 'bg-[#0a1628]/60 backdrop-blur-md'
             }`}>
@@ -83,16 +95,18 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
-            <div className={`lg:hidden absolute top-14 left-0 right-0 bg-[#070f1d]/98 backdrop-blur-2xl transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-[400px] opacity-100 border-b border-slate-800' : 'max-h-0 opacity-0'
+            {/* Mobile Menu Overlay - Full Screen with dark glass background */}
+            <div className={`lg:hidden absolute top-full left-0 right-0 h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4rem)] z-50 bg-[#070f1d]/95 backdrop-blur-2xl transition-all duration-300 overflow-y-auto ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
                 }`}>
-                <div className="flex flex-col py-2">
+                <div className="flex flex-col py-6 px-6 gap-2">
                     {navItems.map((item, index) => (
                         <button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
-                            className={`py-3.5 px-6 text-left text-slate-300 font-medium font-montserrat text-sm uppercase tracking-wider hover:bg-[#0f1f3d]/50 hover:text-amber-400 transition-colors border-b border-slate-800/40 ${index === navItems.length - 1 ? 'bg-amber-500 !text-black font-bold border-none mx-6 my-2 rounded-lg text-center py-2.5 shadow-md shadow-amber-500/20 hover:bg-amber-400 hover:text-black' : ''
-                                }`}
+                            className={index === navItems.length - 1
+                                ? 'py-3.5 px-6 text-center text-black font-bold font-montserrat text-base uppercase tracking-wider bg-amber-500 hover:bg-amber-400 transition-colors my-4 rounded-xl shadow-lg shadow-amber-500/20'
+                                : 'py-4 px-6 text-left text-slate-300 font-semibold font-montserrat text-lg uppercase tracking-wider hover:bg-[#0f1f3d]/50 hover:text-amber-400 transition-colors border-b border-slate-800/40'
+                            }
                         >
                             {item.label}
                         </button>
