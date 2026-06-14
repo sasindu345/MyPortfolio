@@ -11,13 +11,13 @@
 body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: #0a1628;
 }
 
 /* Selection */
 ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(245, 158, 11, 0.3);
+  color: #f8fafc;
 }
 
 @layer components {
@@ -34,52 +34,48 @@ body {
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10;
+    @apply bg-[#0f1f3d]/40 backdrop-blur-md rounded-2xl border border-slate-500/15;
   }
 
   .glass-card-hover {
-    @apply hover:border-white/30 hover:bg-white/10 transition-all duration-300;
+    @apply hover:border-amber-500/30 hover:bg-[#0f1f3d]/60 transition-all duration-300;
   }
 }
 
-/* Custom Scrollbar - Black & White */
+/* Custom Scrollbar - Navy & Amber */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #070f1d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #fff, #888);
+  background: linear-gradient(to bottom, #f59e0b, #fbbf24);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #fff, #aaa);
+  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
 }
 
 /* Custom Animations */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes glow {
-
   0%,
   100% {
     opacity: 0.3;
   }
-
   50% {
     opacity: 0.6;
   }
@@ -90,7 +86,6 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -101,9 +96,26 @@ body {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -121,4 +133,16 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.pause-marquee:hover {
+  animation-play-state: paused;
 }

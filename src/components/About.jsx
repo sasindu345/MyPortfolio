@@ -1,78 +1,101 @@
-import { FaPaintBrush, FaCode, FaWrench } from 'react-icons/fa';
+import { FaGraduationCap, FaCode, FaCloud, FaBullseye } from 'react-icons/fa';
 import { useScrollAnimation, useStaggerAnimation } from '../hooks/useScrollAnimation';
 
 const iconMap = {
-    design: FaPaintBrush,
+    education: FaGraduationCap,
     code: FaCode,
-    maintenance: FaWrench,
+    cloud: FaCloud,
+    target: FaBullseye,
 };
 
 export default function About({ profile }) {
-    const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-    const { containerRef, visibleItems } = useStaggerAnimation(profile?.services?.length || 3, 150);
+    const { ref: textRef, isVisible: textVisible } = useScrollAnimation();
+    const factsCount = profile?.quickFacts?.length || 4;
+    const { containerRef, visibleItems } = useStaggerAnimation(factsCount, 100);
 
     return (
-        <section id="about" className="py-16 md:py-24 lg:py-32 bg-zinc-950 relative overflow-hidden">
-            {/* Background */}
-            <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-white/3 rounded-full blur-3xl"></div>
+        <section id="about" className="py-16 md:py-24 lg:py-32 bg-[#070f1d] relative overflow-hidden">
+            {/* Background blur effects */}
+            <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
 
             <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
-                {/* Section Header */}
-                <div
-                    ref={headerRef}
-                    className={`text-center mb-12 md:mb-20 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+                    
+                    {/* Left Column: Narrative (5 cols) */}
+                    <div 
+                        ref={textRef}
+                        className={`lg:col-span-5 space-y-6 transition-all duration-700 ${
+                            textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                         }`}
-                >
-                    <span className="inline-block px-3 md:px-4 py-2 bg-white/10 text-white/80 text-xs md:text-sm font-semibold rounded-full mb-4 md:mb-6 tracking-wider border border-white/20">
-                        ABOUT ME
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
-                        Passionate About Creating
-                        <span className="block text-white/60">
-                            Digital Excellence
-                        </span>
-                    </h2>
-                    <p className="text-white/50 text-sm md:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed px-4">
-                        {profile?.aboutDescription || 'Dedicated to crafting exceptional digital experiences through innovative solutions and clean, maintainable code.'}
-                    </p>
-                </div>
+                    >
+                        <div>
+                            <span className="inline-block px-4 py-2 bg-amber-500/10 text-amber-500 text-xs md:text-sm font-bold rounded-full mb-4 tracking-wider border border-amber-500/20 font-montserrat">
+                                ABOUT ME
+                            </span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-raleway">
+                                My Academic &
+                                <span className="block text-amber-500 mt-1 font-raleway">
+                                    Learning Journey
+                                </span>
+                            </h2>
+                        </div>
+                        
+                        <p className="text-slate-300/80 text-sm md:text-base leading-relaxed font-opensans">
+                            {profile?.aboutDescription || 'Dedicated to crafting exceptional digital experiences through innovative solutions and clean, maintainable code.'}
+                        </p>
 
-                {/* Services Grid */}
-                <div ref={containerRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                    {profile?.services?.map((service, index) => {
-                        const Icon = iconMap[service.icon] || FaCode;
-                        const isItemVisible = visibleItems.includes(index);
-
-                        return (
-                            <div
-                                key={index}
-                                className={`group relative p-6 md:p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-500 ${isItemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                                    }`}
-                                style={{ transitionDelay: `${index * 100}ms` }}
+                        <div className="pt-4 flex flex-wrap gap-4">
+                            <a 
+                                href="#projects" 
+                                className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-[#0a1628] font-bold rounded-lg transition-all duration-300 font-montserrat text-sm shadow-lg shadow-amber-500/20"
                             >
-                                <div className="relative z-10">
-                                    {/* Icon */}
-                                    <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                                        <Icon className="w-5 h-5 md:w-7 md:h-7 text-black" />
+                                View My Projects
+                            </a>
+                            <a 
+                                href="#contact" 
+                                className="px-6 py-3 bg-[#0f1f3d]/60 hover:bg-[#0f1f3d] text-white font-bold rounded-lg transition-all duration-300 font-montserrat text-sm border border-slate-500/15 hover:border-amber-500/30"
+                            >
+                                Get in Touch
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Quick Facts / Highlights (7 cols) */}
+                    <div ref={containerRef} className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                        {profile?.quickFacts?.map((fact, index) => {
+                            const Icon = iconMap[fact.icon] || FaCode;
+                            const isItemVisible = visibleItems.includes(index);
+
+                            return (
+                                <div
+                                    key={index}
+                                    className={`group glass-card glass-card-hover p-6 transition-all duration-500 ${
+                                        isItemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                                    }`}
+                                    style={{ transitionDelay: `${index * 100}ms` }}
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-10 h-10 bg-amber-500/10 group-hover:bg-amber-500 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 border border-amber-500/20 group-hover:border-amber-500">
+                                            <Icon className="w-5 h-5 text-amber-400 group-hover:text-[#0a1628] transition-colors duration-300" />
+                                        </div>
+                                        <div>
+                                            <span className="text-xs text-amber-500/80 font-bold uppercase tracking-wider block mb-1 font-montserrat">
+                                                {fact.label}
+                                            </span>
+                                            <h3 className="text-sm md:text-base font-bold text-white mb-1 font-raleway group-hover:text-amber-400 transition-colors duration-300">
+                                                {fact.value}
+                                            </h3>
+                                            <p className="text-xs md:text-sm text-slate-300/50 font-opensans leading-relaxed">
+                                                {fact.detail}
+                                            </p>
+                                        </div>
                                     </div>
-
-                                    {/* Content */}
-                                    <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4 tracking-wide">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-white/50 text-sm md:text-base leading-relaxed">
-                                        {service.description}
-                                    </p>
                                 </div>
+                            );
+                        })}
+                    </div>
 
-                                {/* Number Badge */}
-                                <div className="absolute top-4 md:top-6 right-4 md:right-6 text-4xl md:text-6xl font-bold text-white/5 group-hover:text-white/10 transition-colors">
-                                    0{index + 1}
-                                </div>
-                            </div>
-                        );
-                    })}
                 </div>
             </div>
         </section>

@@ -65,7 +65,7 @@ function App() {
       {showLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
 
       {/* Main Content - render immediately but hidden behind loading screen */}
-      <div className={`min-h-screen bg-black ${showLoading ? 'overflow-hidden' : ''}`}>
+      <div className={`min-h-screen bg-[#0a1628] text-[#f8fafc] ${showLoading ? 'overflow-hidden' : ''}`}>
         <Navbar />
         <Hero profile={profile} />
         <About profile={profile} />
