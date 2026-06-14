@@ -63,7 +63,7 @@ export default function Timeline({ timeline }) {
 
                                     {/* Content Card */}
                                     <div className={`ml-12 md:ml-0 md:w-[calc(50%-40px)] ${isLeft ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                                        <div className="glass-card glass-card-hover p-4 md:p-6 group flex flex-col justify-start min-h-[200px] sm:min-h-[180px] md:min-h-[210px] lg:min-h-[190px]">
+                                        <div className="glass-card glass-card-hover p-4 md:p-6 group flex flex-col justify-start min-h-[240px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[240px]">
                                             <div>
                                                 {/* Year Badge */}
                                                 <span className="inline-block px-3 py-1 bg-amber-500/10 text-amber-500 text-xs font-bold rounded-full mb-3 border border-amber-500/20 font-montserrat">
