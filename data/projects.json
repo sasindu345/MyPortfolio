@@ -19,11 +19,25 @@
     },
     "projects": [
         {
+            "id": 1,
+            "title": "Piyoway",
+            "subtitle": "designed, developed",
+            "description": "AI-powered Sri Lanka travel planner with smart itineraries.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "PostgreSQL",
+                "AI"
+            ],
+            "category": "ongoing",
+            "demoUrl": "https://piyoway.com",
+            "featured": true
+        },
+        {
             "id": 2,
             "title": "Resume Builder",
             "subtitle": "coded, designed",
-            "description": "Full-stack web app for creating ATS-friendly resumes with live preview and PDF export.",
-            "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=640&h=400&fit=crop",
+            "description": "ATS-friendly resume builder with live preview and PDF export.",
             "technologies": [
                 "React",
                 "TypeScript",
@@ -39,8 +53,7 @@
             "id": 3,
             "title": "MazeMaster",
             "subtitle": "coded",
-            "description": "2-player Arduino maze game with dynamic walls, RFID scoring, and ESP32 car control.",
-            "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&h=400&fit=crop",
+            "description": "Arduino maze game with RFID scoring and ESP32 control.",
             "technologies": [
                 "C++",
                 "Arduino",
@@ -49,8 +62,52 @@
             ],
             "category": "finished",
             "demoUrl": "https://github.com/sasindu345/MazeMaster_codes",
-            "sourceUrl": "https://github.com/sasindu345/MazeMaster_codes",
-            "featured": false
+            "sourceUrl": "https://github.com/sasindu345/MazeMaster_codes"
+        },
+        {
+            "id": 4,
+            "title": "Quizzly Edu",
+            "subtitle": "client project",
+            "description": "Interactive medical learning and quiz platform with analytics.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "PostgreSQL"
+            ],
+            "category": "finished",
+            "demoUrl": "https://quizzlyedu.com",
+            "featured": true
+        },
+        {
+            "id": 5,
+            "title": "Garbo SWMS",
+            "subtitle": "ongoing",
+            "description": "Smart waste management system with multi-role mobile app.",
+            "technologies": [
+                "Flutter",
+                "Spring Boot",
+                "PostgreSQL",
+                "Docker"
+            ],
+            "category": "ongoing",
+            "demoUrl": "https://github.com/CodeMIndsUoM",
+            "sourceUrl": "https://github.com/CodeMIndsUoM",
+            "featured": true
+        },
+        {
+            "id": 6,
+            "title": "Smart Painter",
+            "subtitle": "coded",
+            "description": "AI-assisted digital painting and image editing platform.",
+            "technologies": [
+                "React",
+                "AI",
+                "Canvas",
+                "Node.js"
+            ],
+            "category": "finished",
+            "demoUrl": "https://github.com/sasindu345/smart-ai-painter",
+            "sourceUrl": "https://github.com/sasindu345/smart-ai-painter"
         }
     ],
     "filters": [

@@ -1,119 +1,21 @@
 {
-    "categories": [
-        {
-            "title": "CORE SKILLS (USING NOW):",
-            "skills": [
-                {
-                    "name": "HTML5",
-                    "icon": "html5",
-                    "color": "#E34F26"
-                },
-                {
-                    "name": "CSS3",
-                    "icon": "css3",
-                    "color": "#1572B6"
-                },
-                {
-                    "name": "JavaScript",
-                    "icon": "javascript",
-                    "color": "#F7DF1E"
-                },
-                {
-                    "name": "React",
-                    "icon": "react",
-                    "color": "#61DAFB"
-                },
-                {
-                    "name": "Tailwind CSS",
-                    "icon": "tailwind",
-                    "color": "#06B6D4"
-                },
-                {
-                    "name": "Git & GitHub",
-                    "icon": "git",
-                    "color": "#F05032"
-                },
-                {
-                    "name": "Figma",
-                    "icon": "figma",
-                    "color": "#F24E1E"
-                }
-            ]
-        },
-        {
-            "title": "BACKEND & DATABASE (LEARNING & USING):",
-            "skills": [
-                {
-                    "name": "Node.js",
-                    "icon": "nodejs",
-                    "color": "#339933"
-                },
-                {
-                    "name": "Spring Boot",
-                    "icon": "spring",
-                    "color": "#6DB33F"
-                },
-                {
-                    "name": "MySQL",
-                    "icon": "mysql",
-                    "color": "#4479A1"
-                },
-                {
-                    "name": "MongoDB",
-                    "icon": "mongodb",
-                    "color": "#47A248"
-                },
-                {
-                    "name": "TypeScript",
-                    "icon": "typescript",
-                    "color": "#3178C6"
-                }
-            ]
-        },
-        {
-            "title": "CLOUD, AI & DATA (BEGINNER / LEARNING):",
-            "skills": [
-                {
-                    "name": "Docker (Basics)",
-                    "icon": "docker",
-                    "color": "#2496ED"
-                },
-                {
-                    "name": "Python",
-                    "icon": "python",
-                    "color": "#3776AB"
-                },
-                {
-                    "name": "Data Science",
-                    "icon": "data",
-                    "color": "#10B981"
-                }
-            ]
-        },
-        {
-            "title": "OTHER SKILLS:",
-            "skills": [
-                {
-                    "name": "English ",
-                    "icon": "language",
-                    "color": "#4B5563"
-                },
-                {
-                    "name": "C",
-                    "icon": "c",
-                    "color": "#A8B9CC"
-                },
-                {
-                    "name": "C++",
-                    "icon": "cplusplus",
-                    "color": "#00599C"
-                },
-                {
-                    "name": "Arduino",
-                    "icon": "arduino",
-                    "color": "#00979D"
-                }
-            ]
-        }
+    "skills": [
+        { "name": "React", "icon": "react", "color": "#61DAFB" },
+        { "name": "Spring Boot", "icon": "spring", "color": "#6DB33F" },
+        { "name": "Node.js", "icon": "nodejs", "color": "#339933" },
+        { "name": "TypeScript", "icon": "typescript", "color": "#3178C6" },
+        { "name": "JavaScript", "icon": "javascript", "color": "#F7DF1E" },
+        { "name": "Docker", "icon": "docker", "color": "#2496ED" },
+        { "name": "MySQL", "icon": "mysql", "color": "#4479A1" },
+        { "name": "MongoDB", "icon": "mongodb", "color": "#47A248" },
+        { "name": "Python", "icon": "python", "color": "#3776AB" },
+        { "name": "C++", "icon": "cplusplus", "color": "#00599C" },
+        { "name": "C", "icon": "c", "color": "#A8B9CC" },
+        { "name": "Arduino", "icon": "arduino", "color": "#00979D" },
+        { "name": "HTML5", "icon": "html5", "color": "#E34F26" },
+        { "name": "CSS3", "icon": "css3", "color": "#1572B6" },
+        { "name": "Tailwind CSS", "icon": "tailwind", "color": "#06B6D4" },
+        { "name": "Git & GitHub", "icon": "git", "color": "#F05032" },
+        { "name": "Figma", "icon": "figma", "color": "#F24E1E" }
     ]
 }

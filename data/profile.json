@@ -1,33 +1,42 @@
 {
     "name": "Sasindu Wijewardana",
     "profileImage": "images/Profile.webp",
-    "title": "Software Engineer | Aspiring Cloud & AI Engineer",
-    "subtitle": "Full-Stack Web • Cloud Computing • AI/ML Fundamentals",
+    "title": "Undergraduate | Full-Stack Developer",
+    "subtitle": "React • Node.js • Spring Boot",
     "location": "Sri Lanka",
     "email": "jayamadusasindu5@gmail.com",
     "phone": "+94767349531",
-    "bio": "Software engineering student with a strong foundation in full-stack web development, currently expanding skills in cloud computing, AI/ML, and data-driven systems. Passionate about building scalable applications and understanding how modern cloud and intelligent systems work in real-world products.",
-    "aboutDescription": "I am a software engineering student based in Sri Lanka with hands-on experience in full-stack web development. Alongside building web applications, I am actively learning cloud computing, AI/ML, and data science fundamentals to understand how large-scale, intelligent systems are designed and deployed. I enjoy learning by building projects, experimenting with new technologies, and continuously improving my technical depth.",
+    "bio": "Software engineering undergraduate at the University of Moratuwa. I specialize in building responsive, clean full-stack web applications and enjoy exploring DevOps pipelines and cloud deployments. Currently seeking an internship opportunity in IT.",
+    "aboutDescription": "I am a software engineering undergraduate student at the University of Moratuwa, Sri Lanka. I have a strong foundation in full-stack web development, working primarily with React, Node.js, and Spring Boot. I enjoy setting up simple DevOps workflows and learning about cloud structures. I focus on learning by building hands-on projects, collaborating in hackathons, and constantly refining my core coding practices.",
     "social": {
         "github": "https://github.com/sasindu345",
         "linkedin": "https://www.linkedin.com/in/sasindu-jayamadu-659861348/",
         "facebook": "https://www.facebook.com/share/1ABt6BTiYb/"
     },
-    "services": [
+    "quickFacts": [
         {
-            "title": "FULL-STACK DEVELOPMENT",
-            "description": "Building responsive and scalable web applications using React, Node.js, and Spring Boot with clean architecture and best practices.",
+            "label": "Education",
+            "value": "B.Sc. (Hons) Software Engineering Undergraduate",
+            "detail": "University of Moratuwa, Sri Lanka",
+            "icon": "education"
+        },
+        {
+            "label": "Core Focus",
+            "value": "Full-Stack Web Development",
+            "detail": "React, Node.js, Spring Boot, SQL/NoSQL",
             "icon": "code"
         },
         {
-            "title": "CLOUD FUNDAMENTALS",
-            "description": "Learning and implementing cloud concepts such as deployment, containers, and basic cloud services through hands-on projects.",
+            "label": "Interests & Learning",
+            "value": "DevOps & Cloud Computing",
+            "detail": "CI/CD pipelines, Docker, Cloud basics",
             "icon": "cloud"
         },
         {
-            "title": "AI & DATA LEARNING",
-            "description": "Exploring AI/ML and data science fundamentals including data handling, model basics, and real-world use cases.",
-            "icon": "ai"
+            "label": "Current Goal",
+            "value": "Seeking IT Internship",
+            "detail": "6-month industry placement opportunity",
+            "icon": "target"
         }
     ]
 }

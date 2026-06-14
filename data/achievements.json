@@ -32,6 +32,15 @@
             "placement": "Runners Up"
         },
         {
+            "icon": "medal",
+            "year": "2025",
+            "title": "ZERO-DAY CTF",
+            "organization": "ISACA, SLTC",
+            "description": "Won 2nd Runner-Up in the Zero Day Capture The Flag cybersecurity hackathon.",
+            "image": "images/achievements/zeroday.jpeg",
+            "placement": "Runners Up"
+        },
+        {
             "icon": "award",
             "year": "2025",
             "title": "OCTWAVE 2.0",
