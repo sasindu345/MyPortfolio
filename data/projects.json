@@ -20,6 +20,38 @@
     "projects": [
         {
             "id": 1,
+            "title": "RentLanka",
+            "subtitle": "coded, designed",
+            "description": "Peer-to-peer equipment rental platform with real-time chat and verification.",
+            "technologies": [
+                "Flutter",
+                ".NET",
+                "PostgreSQL",
+                "Next.js"
+            ],
+            "category": "finished",
+            "demoUrl": "https://github.com/sasindu345/RentLanka",
+            "sourceUrl": "https://github.com/sasindu345/RentLanka",
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": "Veracity",
+            "subtitle": "ongoing",
+            "description": "AI competitive intelligence workspace with automated change detection.",
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "PostgreSQL",
+                "Gemini AI"
+            ],
+            "category": "ongoing",
+            "demoUrl": "https://github.com/Pasidu-Mihiranga/Veracity",
+            "sourceUrl": "https://github.com/Pasidu-Mihiranga/Veracity",
+            "featured": true
+        },
+        {
+            "id": 3,
             "title": "Piyoway",
             "subtitle": "designed, developed",
             "description": "AI-powered Sri Lanka travel planner with smart itineraries.",
@@ -29,12 +61,28 @@
                 "PostgreSQL",
                 "AI"
             ],
-            "category": "ongoing",
+            "category": "finished",
             "demoUrl": "https://piyoway.com",
             "featured": true
         },
         {
-            "id": 2,
+            "id": 4,
+            "title": "Garbo SWMS",
+            "subtitle": "completed",
+            "description": "Smart waste management system with multi-role mobile app and backend.",
+            "technologies": [
+                "Flutter",
+                "Spring Boot",
+                "PostgreSQL",
+                "Docker"
+            ],
+            "category": "finished",
+            "demoUrl": "https://github.com/CodeMIndsUoM",
+            "sourceUrl": "https://github.com/CodeMIndsUoM",
+            "featured": true
+        },
+        {
+            "id": 5,
             "title": "Resume Builder",
             "subtitle": "coded, designed",
             "description": "ATS-friendly resume builder with live preview and PDF export.",
@@ -50,7 +98,21 @@
             "featured": true
         },
         {
-            "id": 3,
+            "id": 6,
+            "title": "Quizzly Edu",
+            "subtitle": "client project",
+            "description": "Interactive medical learning and quiz platform with analytics.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "PostgreSQL"
+            ],
+            "category": "finished",
+            "demoUrl": "https://quizzlyedu.com",
+            "featured": true
+        },
+        {
+            "id": 7,
             "title": "MazeMaster",
             "subtitle": "coded",
             "description": "Arduino maze game with RFID scoring and ESP32 control.",
@@ -65,37 +127,7 @@
             "sourceUrl": "https://github.com/sasindu345/MazeMaster_codes"
         },
         {
-            "id": 4,
-            "title": "Quizzly Edu",
-            "subtitle": "client project",
-            "description": "Interactive medical learning and quiz platform with analytics.",
-            "technologies": [
-                "React",
-                "Node.js",
-                "PostgreSQL"
-            ],
-            "category": "finished",
-            "demoUrl": "https://quizzlyedu.com",
-            "featured": true
-        },
-        {
-            "id": 5,
-            "title": "Garbo SWMS",
-            "subtitle": "ongoing",
-            "description": "Smart waste management system with multi-role mobile app.",
-            "technologies": [
-                "Flutter",
-                "Spring Boot",
-                "PostgreSQL",
-                "Docker"
-            ],
-            "category": "ongoing",
-            "demoUrl": "https://github.com/CodeMIndsUoM",
-            "sourceUrl": "https://github.com/CodeMIndsUoM",
-            "featured": true
-        },
-        {
-            "id": 6,
+            "id": 8,
             "title": "Smart Painter",
             "subtitle": "coded",
             "description": "AI-assisted digital painting and image editing platform.",
