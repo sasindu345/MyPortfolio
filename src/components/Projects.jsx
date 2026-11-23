@@ -81,28 +81,25 @@ export default function Projects({ projects }) {
                                 className={`group relative glass-card glass-card-hover overflow-hidden transition-all duration-500 h-full flex flex-col ${isItemVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'
                                     }`}
                             >
-                                {/* Decorative Header with Gradient */}
+                                {/* Cover */}
                                 <div className={`relative h-40 md:h-48 bg-gradient-to-br ${cardTheme.gradient} overflow-hidden`}>
-                                    {/* Animated Pattern */}
-                                    <div className="absolute inset-0 opacity-30">
-                                        <div className="absolute top-4 left-4 w-20 h-20 border border-amber-500/10 rounded-full"></div>
-                                        <div className="absolute top-8 left-8 w-32 h-32 border border-indigo-500/10 rounded-full"></div>
-                                        <div className="absolute -bottom-10 -right-10 w-40 h-40 border-2 border-amber-500/10 rounded-full"></div>
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-amber-500/5 rounded-full blur-xl"></div>
-                                    </div>
+                                    {project.image ? (
+                                        <img
+                                            src={project.image}
+                                            alt=""
+                                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    ) : (
+                                        <div className="absolute inset-0 opacity-30">
+                                            <div className="absolute top-4 left-4 w-20 h-20 border border-amber-500/10 rounded-full"></div>
+                                            <div className="absolute -bottom-10 -right-10 w-40 h-40 border-2 border-amber-500/10 rounded-full"></div>
+                                        </div>
+                                    )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/25 to-transparent"></div>
 
-                                    {/* Floating Code Lines */}
-                                    <div className="absolute top-6 right-6 space-y-2 opacity-35">
-                                        <div className="w-16 h-1.5 bg-amber-500/30 rounded-full"></div>
-                                        <div className="w-12 h-1.5 bg-indigo-500/20 rounded-full"></div>
-                                        <div className="w-20 h-1.5 bg-amber-500/30 rounded-full"></div>
-                                        <div className="w-8 h-1.5 bg-indigo-500/20 rounded-full"></div>
-                                    </div>
-
-                                    {/* Large Icon */}
                                     <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-                                        <div className="w-14 h-14 md:w-16 md:h-16 bg-[#0a1628]/60 backdrop-blur-sm rounded-xl md:rounded-2xl flex items-center justify-center border border-slate-500/20 group-hover:scale-110 group-hover:border-amber-500/40 transition-all duration-300">
-                                            <CategoryIcon className="w-6 h-6 md:w-8 md:h-8 text-amber-400" />
+                                        <div className="w-10 h-10 md:w-11 md:h-11 bg-[#0a1628]/70 backdrop-blur-sm rounded-xl flex items-center justify-center border border-slate-500/20">
+                                            <CategoryIcon className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />
                                         </div>
                                     </div>
 
