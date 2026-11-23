@@ -6,9 +6,9 @@
             "title": "Project title - max 30 characters (required)",
             "subtitle": "Brief subtitle like 'coded, designed' - max 20 characters (optional)",
             "description": "Project description - MAX 80 CHARACTERS for best display (required)",
-            "image": "Image URL - not displayed but kept for reference (optional)",
+            "image": "Path to a cover in 'images/projects/' (optional)",
             "technologies": "Array of tech stack items - max 4 items recommended (required)",
-            "category": "Project status: 'finished' or 'ongoing' (required)",
+            "category": "One of: 'AI', 'Web', 'Mobile', 'IoT' (required)",
             "demoUrl": "Live demo or project URL (optional)",
             "sourceUrl": "GitHub repository URL (optional)",
             "featured": "true to highlight the project (optional)"
@@ -19,17 +19,52 @@
     },
     "projects": [
         {
+            "id": 9,
+            "title": "CostPilot",
+            "subtitle": "agentic AI",
+            "description": "AI assistant that explains cloud bills in plain English, with trusted numbers.",
+            "image": "images/projects/costpilot.jpg",
+            "technologies": [
+                "Next.js",
+                "FastAPI",
+                "Gemini",
+                "PostgreSQL"
+            ],
+            "category": "AI",
+            "demoUrl": "https://github.com/sasindu345/CostPilot",
+            "sourceUrl": "https://github.com/sasindu345/CostPilot",
+            "featured": true
+        },
+        {
+            "id": 10,
+            "title": "OpsMind",
+            "subtitle": "AIOps platform",
+            "description": "AIOps platform that explains incidents and proposes fixes a human approves.",
+            "image": "images/projects/opsmind.jpg",
+            "technologies": [
+                "FastAPI",
+                "React",
+                "LiteLLM",
+                "Terraform"
+            ],
+            "category": "AI",
+            "demoUrl": "https://github.com/sasindu345/opsmind",
+            "sourceUrl": "https://github.com/sasindu345/opsmind",
+            "featured": true
+        },
+        {
             "id": 1,
             "title": "RentLanka",
             "subtitle": "coded, designed",
             "description": "Peer-to-peer equipment rental platform with real-time chat and verification.",
+            "image": "images/projects/rentlanka.jpg",
             "technologies": [
                 "Flutter",
                 ".NET",
                 "PostgreSQL",
                 "Next.js"
             ],
-            "category": "finished",
+            "category": "Mobile",
             "demoUrl": "https://github.com/sasindu345/RentLanka",
             "sourceUrl": "https://github.com/sasindu345/RentLanka",
             "featured": true
@@ -37,15 +72,16 @@
         {
             "id": 2,
             "title": "Veracity",
-            "subtitle": "ongoing",
+            "subtitle": "AI workspace",
             "description": "AI competitive intelligence workspace with automated change detection.",
+            "image": "images/projects/veracity.jpg",
             "technologies": [
                 "Next.js",
                 "TypeScript",
                 "PostgreSQL",
                 "Gemini AI"
             ],
-            "category": "ongoing",
+            "category": "AI",
             "demoUrl": "https://github.com/Pasidu-Mihiranga/Veracity",
             "sourceUrl": "https://github.com/Pasidu-Mihiranga/Veracity",
             "featured": true
@@ -55,28 +91,30 @@
             "title": "Piyoway",
             "subtitle": "designed, developed",
             "description": "AI-powered Sri Lanka travel planner with smart itineraries.",
+            "image": "images/projects/piyoway.jpg",
             "technologies": [
                 "React",
                 "Node.js",
                 "PostgreSQL",
                 "AI"
             ],
-            "category": "finished",
+            "category": "Web",
             "demoUrl": "https://piyoway.com",
             "featured": true
         },
         {
             "id": 4,
             "title": "Garbo SWMS",
-            "subtitle": "completed",
+            "subtitle": "mobile, backend",
             "description": "Smart waste management system with multi-role mobile app and backend.",
+            "image": "images/projects/garbo.jpg",
             "technologies": [
                 "Flutter",
                 "Spring Boot",
                 "PostgreSQL",
                 "Docker"
             ],
-            "category": "finished",
+            "category": "Mobile",
             "demoUrl": "https://github.com/CodeMIndsUoM",
             "sourceUrl": "https://github.com/CodeMIndsUoM",
             "featured": true
@@ -86,13 +124,14 @@
             "title": "Resume Builder",
             "subtitle": "coded, designed",
             "description": "ATS-friendly resume builder with live preview and PDF export.",
+            "image": "images/projects/resume-builder.jpg",
             "technologies": [
                 "React",
                 "TypeScript",
                 "Spring Boot",
                 "PostgreSQL"
             ],
-            "category": "finished",
+            "category": "Web",
             "demoUrl": "https://github.com/sasindu345/resume-builder",
             "sourceUrl": "https://github.com/sasindu345/resume-builder",
             "featured": true
@@ -102,12 +141,13 @@
             "title": "Quizzly Edu",
             "subtitle": "client project",
             "description": "Interactive medical learning and quiz platform with analytics.",
+            "image": "images/projects/quizzly.jpg",
             "technologies": [
                 "React",
                 "Node.js",
                 "PostgreSQL"
             ],
-            "category": "finished",
+            "category": "Web",
             "demoUrl": "https://quizzlyedu.com",
             "featured": true
         },
@@ -116,13 +156,14 @@
             "title": "MazeMaster",
             "subtitle": "coded",
             "description": "Arduino maze game with RFID scoring and ESP32 control.",
+            "image": "images/projects/mazemaster.jpg",
             "technologies": [
                 "C++",
                 "Arduino",
                 "ESP32",
                 "RFID"
             ],
-            "category": "finished",
+            "category": "IoT",
             "demoUrl": "https://github.com/sasindu345/MazeMaster_codes",
             "sourceUrl": "https://github.com/sasindu345/MazeMaster_codes"
         },
@@ -131,20 +172,23 @@
             "title": "Smart Painter",
             "subtitle": "coded",
             "description": "AI-assisted digital painting and image editing platform.",
+            "image": "images/projects/smart-painter.jpg",
             "technologies": [
                 "React",
                 "AI",
                 "Canvas",
                 "Node.js"
             ],
-            "category": "finished",
+            "category": "AI",
             "demoUrl": "https://github.com/sasindu345/smart-ai-painter",
             "sourceUrl": "https://github.com/sasindu345/smart-ai-painter"
         }
     ],
     "filters": [
-        "ALL",
-        "FINISHED",
-        "ONGOING"
+        "All",
+        "AI",
+        "Web",
+        "Mobile",
+        "IoT"
     ]
 }

@@ -16,6 +16,13 @@
         },
         {
             "type": "milestone",
+            "year": "2026",
+            "title": "QuantAdge, Cre8x & IgnitX",
+            "organization": "UoC, KDU & Hutch",
+            "description": "1st Place at QuantAdge 1.0 during ICCMM 2026, 1st Runner-Up at Cre8x 3.0, and 2nd Runner-Up at IgnitX by Hutch with Team Gmora."
+        },
+        {
+            "type": "milestone",
             "year": "2025",
             "title": "National Hackathons & CTFs",
             "organization": "UoJP, UoM & SLTC",
