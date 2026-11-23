@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import { FaExternalLinkAlt, FaGithub, FaCode, FaServer, FaMobile, FaDatabase, FaPalette, FaRocket } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaCode, FaMobile, FaBrain, FaMicrochip } from 'react-icons/fa';
 import { useScrollAnimation, useStaggerAnimation } from '../hooks/useScrollAnimation';
 
 // Icon mapping for project types
 const categoryIcons = {
+    AI: FaBrain,
     WEB: FaCode,
     MOBILE: FaMobile,
-    BACKEND: FaServer,
-    DATABASE: FaDatabase,
-    DESIGN: FaPalette,
-    OTHER: FaRocket,
+    IOT: FaMicrochip,
 };
 
 // Consistent gradient theme for all cards (Amber and Indigo)
@@ -19,14 +17,14 @@ const cardTheme = {
 };
 
 export default function Projects({ projects }) {
-    const [activeFilter, setActiveFilter] = useState('ALL');
+    const [activeFilter, setActiveFilter] = useState('All');
     const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
 
-    const filters = projects?.filters || ['ALL', 'WEB', 'MOBILE', 'OTHER'];
+    const filters = projects?.filters || ['All', 'AI', 'Web', 'Mobile', 'IoT'];
 
     const filteredProjects = projects?.projects?.filter(project => {
-        if (activeFilter === 'ALL') return true;
-        return project.category?.toUpperCase() === activeFilter;
+        if (activeFilter.toUpperCase() === 'ALL') return true;
+        return project.category?.toUpperCase() === activeFilter.toUpperCase();
     }) || [];
 
     const { containerRef, visibleItems } = useStaggerAnimation(filteredProjects.length, 150);
@@ -141,7 +139,7 @@ export default function Projects({ projects }) {
                                 {/* Content */}
                                 <div className="p-4 md:p-6 flex-1 flex flex-col">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="px-2.5 py-0.5 bg-amber-500/10 text-amber-500 text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-md border border-amber-500/20 font-montserrat">
+                                        <span className="px-2.5 py-0.5 bg-amber-500/10 text-amber-500 text-[10px] md:text-xs font-bold tracking-wider rounded-md border border-amber-500/20 font-montserrat">
                                             {project.category || 'Project'}
                                         </span>
                                     </div>

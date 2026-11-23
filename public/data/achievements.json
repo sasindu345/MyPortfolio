@@ -24,6 +24,33 @@
     "items": [
         {
             "icon": "trophy",
+            "year": "2026",
+            "title": "QuantAdge 1.0",
+            "organization": "CMM, University of Colombo",
+            "description": "Champions of QuantAdge 1.0, the quantitative investment research competition.",
+            "image": "images/achievements/quantadge.jpg",
+            "placement": "1st Place"
+        },
+        {
+            "icon": "medal",
+            "year": "2026",
+            "title": "Cre8x 3.0",
+            "organization": "BCS Student Chapter, KDU",
+            "description": "1st Runner-Up at the 8-hour national UI/UX designathon, Cre8x 3.0.",
+            "image": "images/achievements/cre8x.jpg",
+            "placement": "1st Runner-Up"
+        },
+        {
+            "icon": "medal",
+            "year": "2026",
+            "title": "IgnitX by Hutch",
+            "organization": "Hutch Sri Lanka",
+            "description": "2nd Runner-Up at IgnitX by Hutch, an innovation hackathon.",
+            "image": "images/achievements/ignitx.jpg",
+            "placement": "2nd Runner-Up"
+        },
+        {
+            "icon": "trophy",
             "year": "2025",
             "title": "BioFusion 2025",
             "organization": "University Of Sri Jayawardenepura",
